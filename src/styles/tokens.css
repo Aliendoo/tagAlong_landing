@@ -1,0 +1,20 @@
+:root {
+  --paper: #fffaf0;
+  --paper-deep: #fff2df;
+  --ink: #151b29;
+  --muted: #667080;
+  --orange: #ff6b00;
+  --orange-dark: #e85a00;
+  --pink: #d6457f;
+  --orange-deep: #803900;
+  --pink-light: #ffd5e3;
+  --line: #eadfce;
+  --white: #ffffff;
+  --font-body: 'DM Sans', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-editorial: 'Fraunces', Georgia, serif;
+  --font-playful: 'Bricolage Grotesque', sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --content-width: 1180px;
+  --page-gutter: clamp(20px, 5.5vw, 76px);
+}
