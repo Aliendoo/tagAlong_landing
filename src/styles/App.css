@@ -76,11 +76,6 @@
 .founder-note li::marker { color: var(--orange); }
 .waitlist-section { padding: 72px var(--page-gutter); background: linear-gradient(180deg,#fff0 0%,#fff0f4 70%,#fff7f1 100%); }
 .waitlist-content { max-width: 1000px; margin: auto; text-align: center; }
-.beta-travel-icons { display: flex; justify-content: center; align-items: center; gap: 13px; margin-bottom: 24px; }
-.beta-travel-icons span { display: grid; place-items: center; width: 48px; height: 48px; border-radius: 15px; background: #fff0e9; color: var(--orange); transform: rotate(-9deg); }
-.beta-travel-icons span:nth-child(2) { background: #ffe9f1; color: var(--pink); transform: translateY(-6px); }
-.beta-travel-icons span:nth-child(3) { transform: rotate(9deg); }
-.beta-travel-icons svg { width: 25px; height: 25px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
 .beta-invitation { margin: 0 0 10px; font-family: Manrope, sans-serif; font-size: clamp(25px, 3vw, 34px); font-weight: 700; letter-spacing: -.04em; }
 .beta-description { max-width: 330px; margin: 0 auto 25px; color: var(--muted); font-size: 16px; line-height: 1.5; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 18px; min-height: 50px; padding: 0 25px; border-radius: 999px; font-size: 13px; font-weight: 600; text-decoration: none; transition: transform 200ms ease, background-color 200ms ease; }

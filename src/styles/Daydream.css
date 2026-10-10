@@ -43,8 +43,11 @@
 .route-line { fill: none; stroke: var(--orange); stroke-width: 3.5; stroke-linecap: round; stroke-dasharray: 7 12; vector-effect: non-scaling-stroke; }
 .route-upcoming { opacity: .3; }
 .route-visited { opacity: .8; }
-.route-stop { fill: #fff7f4; stroke: #f267484d; stroke-width: 2; vector-effect: non-scaling-stroke; transition: fill 200ms ease, stroke 200ms ease; }
-.route-stop.is-visited { fill: var(--orange); stroke: #fff7f4; }
+.route-stop { color: var(--orange); }
+.route-pin { fill: #fff1e9; stroke: currentColor; stroke-width: 2.5; vector-effect: non-scaling-stroke; transition: fill 200ms ease; }
+.route-stop.is-visited .route-pin { fill: #f26748; }
+.route-pin-center { fill: white; stroke: #b94a35; stroke-width: 2; vector-effect: non-scaling-stroke; }
+.route-pin-sketch { fill: none; stroke: #b94a35; stroke-width: 1.3; stroke-linecap: round; opacity: .6; vector-effect: non-scaling-stroke; }
 .route-traveler { fill: var(--orange); stroke: white; stroke-width: 2; vector-effect: non-scaling-stroke; }
 .chat-message { position: absolute; display: flex; flex-direction: column; align-items: flex-start; width: 252px; text-align: left; opacity: 0; visibility: hidden; transition: opacity 140ms ease; font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif; }
 .chat-message[data-state='visible'], .chat-message[data-state='typing'] { opacity: 1; visibility: visible; }
@@ -153,3 +156,34 @@
 .museum-card:has([data-dragging]) { z-index: 5; }
 .destination-card[data-dragging] { cursor: grabbing; transition: box-shadow 200ms ease; box-shadow: 0 16px 28px #793d3028; }
 @media (prefers-reduced-motion: reduce) { .destination-card { transition: none; } }
+
+/* Keep the conversation readable above the demo on narrow screens. */
+@media (max-width: 680px) {
+  .single-phone-stage { padding-top: 88px; }
+  .single-phone-stage .scroll-phone { width: min(280px, 68vw, calc((100svh - 250px) / 2)); }
+  .single-phone-story .story-sticky { padding-top: 12px; }
+  .single-phone-story .story-heading { margin-top: 14px; }
+  .single-phone-story .story-heading h2 { font-size: clamp(22px, 6vw, 27px); }
+  .chat-message { display: none; }
+  .chat-message[data-mobile-current] { display: flex; width: min(270px, calc(100% - 84px)); left: 42px; right: auto; top: 7px; z-index: 2; }
+  .chat-message.is-outgoing { left: auto; right: 42px; }
+  .ios-bubble { padding: 10px 14px; }
+  .ios-bubble p { font-size: 14px; line-height: 1.35; }
+  .ios-link-preview { display: none; }
+  .scroll-route { top: 84px; height: calc(100% - 84px); }
+  .route-line { stroke-width: 2.5; stroke-dasharray: 5 10; }
+  .route-upcoming { opacity: .22; }
+  .route-pin { stroke-width: 1.8; }
+  .phone-dock { margin-top: 10px; }
+}
+@media (max-width: 680px) and (prefers-reduced-motion: reduce) {
+  .single-phone-stage .scroll-phone { width: min(280px, 68vw); }
+}
+
+
+
+.route-mobile { display: none; }
+@media (max-width: 680px) {
+  .route-desktop { display: none; }
+  .route-mobile { display: block; }
+}

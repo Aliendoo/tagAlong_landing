@@ -8,7 +8,6 @@ export function FoundersSection() {
         <SectionHeading
           firstLine="MEET THE"
           secondLine="FOUNDERS"
-          description="Three friends who got tired of trips that never left the group chat."
         />
         <div className="founders-stage">
           <img
