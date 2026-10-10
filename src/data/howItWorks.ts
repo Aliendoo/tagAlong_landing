@@ -8,20 +8,20 @@ export type Step = {
 export const howItWorks: Step[] = [
   {
     number: '01',
-    title: 'Location Extraction',
-    description: 'Automated extraction of location in short-form videos.',
+    title: 'Save your spots',
+    description: 'Turn the reels you’ve saved into places for your next trip.',
     color: 'pink',
   },
   {
     number: '02',
-    title: 'Centralized Planning',
-    description: 'Everything you need to plan, in one place.',
+    title: 'Vote together',
+    description: 'A Yes, Maybe, or No turns everyone’s favorites into a shared shortlist.',
     color: 'orange',
   },
   {
     number: '03',
-    title: 'Plan With Friends',
-    description: 'Sync schedules, pick spots, and get an itinerary built for everyone.',
+    title: 'Find dates that fit',
+    description: 'Match everyone’s availability and turn the shortlist into a trip.',
     color: 'ink',
   },
 ]

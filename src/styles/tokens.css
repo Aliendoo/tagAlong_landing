@@ -1,20 +1,15 @@
 :root {
-  --paper: #fffaf0;
-  --paper-deep: #fff2df;
-  --ink: #151b29;
-  --muted: #667080;
-  --orange: #ff6b00;
-  --orange-dark: #e85a00;
-  --pink: #d6457f;
-  --orange-deep: #803900;
-  --pink-light: #ffd5e3;
-  --line: #eadfce;
+  --paper: #ffffff;
+  --ink: #272323;
+  --muted: #746e6d;
+  --orange: #F26748;
+  --orange-dark: #db5032;
+  --pink: #FF4D8D;
+  --pink-light: #ffe4ef;
+  --line: #f0e6e2;
   --white: #ffffff;
-  --font-body: 'DM Sans', sans-serif;
-  --font-display: 'Space Grotesk', sans-serif;
-  --font-editorial: 'Fraunces', Georgia, serif;
-  --font-playful: 'Bricolage Grotesque', sans-serif;
-  --font-mono: 'DM Mono', monospace;
+  --font-body: 'Figtree', sans-serif;
+  --font-display: 'Manrope', sans-serif;
   --content-width: 1180px;
-  --page-gutter: clamp(20px, 5.5vw, 76px);
+  --page-gutter: clamp(24px, 6vw, 88px);
 }

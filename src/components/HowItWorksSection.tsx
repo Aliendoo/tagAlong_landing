@@ -14,7 +14,6 @@ export function HowItWorksSection() {
                 <h3>{step.title}</h3>
               </div>
               <p>{step.description}</p>
-              <span className="step-arrow" aria-hidden="true">↗</span>
             </article>
           ))}
         </div>

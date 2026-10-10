@@ -1,0 +1,14 @@
+{
+  "calendar": {
+    "frames": 120,
+    "fps": 12,
+    "width": 420,
+    "height": 840
+  },
+  "swipes": {
+    "frames": 66,
+    "fps": 12,
+    "width": 420,
+    "height": 840
+  }
+}

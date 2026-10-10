@@ -13,7 +13,6 @@ export function ProofBand() {
         <div className="proof-message" data-reveal>
           <h2 id="proof-title">More “we found it.<br /><span>We’re going.”</span></h2>
         </div>
-        <div className="proof-scribble" aria-hidden="true">↗</div>
       </div>
     </section>
   )
