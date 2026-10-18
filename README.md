@@ -46,7 +46,21 @@ npm run build
 npm run lint
 ```
 
-The existing beta signup form and Instagram destination are preserved.
+## Email signup
+
+The hero and header link to the inline email form. POST `/api/waitlist` saves normalized emails in the Firestore `waitlist` collection, with a server timestamp and source. A SHA-256 document ID prevents duplicates. Existing signup timestamps are preserved; both new and duplicate submissions receive the same success response.
+
+Setup before deploying:
+1. Use Firebase project `tagalong-495211` and its named Cloud Firestore database `usa-1`. Confirm it exists before deployment.
+2. Use the dedicated `tagalong-waitlist` service account. Its custom IAM role permits only `datastore.entities.create`, scoped to `usa-1`. Set its JSON credentials as `FIREBASE_SERVICE_ACCOUNT_JSON` in Vercel's server environment. Never use a `VITE_` prefix or commit the credentials.
+3. Deny browser/client access to the `waitlist` collection in Firestore rules. The Admin SDK authenticates using IAM; do not replace an existing application's rules wholesale.
+4. Redeploy the Vercel project. Its Node function serves `/api/waitlist`; plain `npm run dev` serves only the UI. Use Vercel's local development server for a connected end-to-end test.
+
+The form reports success only after Firestore confirms a write or an existing signup. If credentials or the database are unavailable, it shows a retry message and preserves the entered email. A hidden bot field and cross-origin rejection provide basic filtering; configure Vercel request rate limits before opening a high-traffic campaign. This stores signup interest only; it does not send email or verify ownership of an address.
+
+Run backend validation with `node --test tests/waitlist.test.js`. Tests use an injected storage function and never submit real signup data.
+
+The Instagram destination is preserved.
 
 ## Design references
 
@@ -58,3 +72,5 @@ The selected Daydream refinement uses the centered product hierarchy at [Rhyme](
 - [Craft: soft gradients](https://mobbin.com/sites/sections/8c9bd91c-6ec1-48cd-aeaa-d6a482c41e28)
 - [Lightship: spacious travel cards](https://mobbin.com/sites/sections/019d6f74-42f5-492b-9cca-31fecb99dac2)
 - [Daylight: warm product stage](https://mobbin.com/sites/sections/3ffb34f4-4713-4a4d-a05e-d18961771f0b)
+
+Production Vercel project: `lilymoons-projects-94eee356/tagalong-landing-public`. GitHub auto-deployment is not connected to this project yet; deploy with the Vercel CLI until repository access is granted.
