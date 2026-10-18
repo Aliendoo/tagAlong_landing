@@ -1,7 +1,8 @@
 .direction-daydream .hero-section { display: grid; grid-template-columns: 1.12fr 1fr; min-height: 500px; padding: 25px var(--page-gutter) 45px; text-align: left; gap: 24px; }
 .direction-daydream .hero-copy { width: 100%; max-width: 540px; margin: 0; }
 .direction-daydream .hero-title { flex-direction: column; gap: 0; font-size: clamp(64px, 9.3vw, 112px); line-height: 1.04; }
-.direction-daydream .hero-description { max-width: 490px; margin: 17px 0 0; font-size: 18px; line-height: 1.5; }
+.direction-daydream .hero-description { width: fit-content; position: relative; isolation: isolate; max-width: 490px; margin: 24px 0 0; padding: 18px 23px; border-radius: 26px; background: #007aff; color: #fff; font-size: 18px; line-height: 1.5; }
+.direction-daydream .hero-description::after { content: ''; position: absolute; z-index: -1; right: -7px; bottom: 0; width: 24px; height: 22px; background: #007aff; border-bottom-left-radius: 18px; clip-path: path('M 0 0 C 12 0 9 16 24 21 C 13 25 0 19 0 10 Z'); }
 .direction-daydream .site-nav .nav-beta { min-height: 52px; padding: 13px 23px; border-color: var(--orange); font-size: 15px; font-weight: 600; }
 .direction-daydream .hero-cta { display: inline-flex; align-items: center; justify-content: center; min-height: 56px; margin-top: 24px; padding: 15px 28px; border: 0; border-radius: 999px; background: var(--orange); color: white; font-size: 16px; font-weight: 600; }
 .direction-daydream .hero-cta:hover { background: var(--orange-dark); }
@@ -102,7 +103,7 @@
   .museum-card-3 { top: 163px; right: 0; }
   .direction-daydream .hero-kicker { margin-bottom: 19px; font-size: 10px; }
   .direction-daydream .hero-title { flex-direction: column; gap: 0; font-size: clamp(42px, 10.8vw, 70px); line-height: 1.06; }
-  .direction-daydream .hero-description { max-width: 94%; margin: 18px 0 0; font-size: 13px; line-height: 1.55; }
+  .direction-daydream .hero-description { max-width: 100%; margin: 18px 0 0; padding: 14px 16px; border-radius: 21px; font-size: 14px; line-height: 1.45; }
   .direction-daydream .hero-cta { min-height: 52px; padding: 13px 23px; font-size: 15px; }
   .direction-daydream .site-nav .nav-beta { min-height: 48px; padding: 10px 17px; font-size: 13px; }
   .single-phone-story { height: 380svh; }
