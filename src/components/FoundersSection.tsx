@@ -21,11 +21,11 @@ export function FoundersSection() {
           {founders.map((founder) => (
             <article className={`founder-note founder-${founder.position}`} key={founder.name} data-reveal>
               <h3>{founder.name} <span>— {founder.role}</span></h3>
-              <ul>
+              {founder.highlights.length > 0 && <ul>
                 {founder.highlights.map((highlight) => (
                   <li key={highlight}>{highlight}</li>
                 ))}
-              </ul>
+              </ul>}
             </article>
           ))}
         </div>
