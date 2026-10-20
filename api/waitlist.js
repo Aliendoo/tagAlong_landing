@@ -4,12 +4,12 @@ import { createWaitlistHandler } from '../server/waitlist.js'
 
 export default createWaitlistHandler(async (id, email) => {
   const name = 'tagalong-waitlist'
-  const projectId = 'tagalong-495211'
+  const projectId = 'tagalong-0519'
   const app = getApps().find(app => app.name === name) ?? initializeApp({
     projectId,
     credential: cert(JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT_JSON || '{}')),
   }, name)
-  await getFirestore(app, 'usa-1').collection('waitlist').doc(id).create({
+  await getFirestore(app).collection('waitlist').doc(id).create({
     email,
     createdAt: FieldValue.serverTimestamp(),
     source: 'landing-page',

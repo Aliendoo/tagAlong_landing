@@ -51,8 +51,8 @@ npm run lint
 The hero and header link to the inline email form. POST `/api/waitlist` saves normalized emails in the Firestore `waitlist` collection, with a server timestamp and source. A SHA-256 document ID prevents duplicates. Existing signup timestamps are preserved; both new and duplicate submissions receive the same success response.
 
 Setup before deploying:
-1. Use Firebase project `tagalong-495211` and its named Cloud Firestore database `usa-1`. Confirm it exists before deployment.
-2. Use the dedicated `tagalong-waitlist` service account. Its custom IAM role permits only `datastore.entities.create`, scoped to `usa-1`. Set its JSON credentials as `FIREBASE_SERVICE_ACCOUNT_JSON` in Vercel's server environment. Never use a `VITE_` prefix or commit the credentials.
+1. Use Firebase project `tagalong-0519` and its Cloud Firestore database `(default)`. Confirm it exists before deployment.
+2. Use the dedicated `tagalong-waitlist` service account. Its custom IAM role permits only `datastore.entities.create`, scoped to `(default)`. Set its JSON credentials as `FIREBASE_SERVICE_ACCOUNT_JSON` in Vercel's server environment. Never use a `VITE_` prefix or commit the credentials.
 3. Deny browser/client access to the `waitlist` collection in Firestore rules. The Admin SDK authenticates using IAM; do not replace an existing application's rules wholesale.
 4. Redeploy the Vercel project. Its Node function serves `/api/waitlist`; plain `npm run dev` serves only the UI. Use Vercel's local development server for a connected end-to-end test.
 
