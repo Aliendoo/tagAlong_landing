@@ -17,11 +17,7 @@ export const founders: Founder[] = [
   {
     name: 'Lilymoon Whalen',
     role: 'CPO',
-    highlights: [
-      'Computer Science at Wellesley College, from Seattle, Washington',
-      'Prev web engineering intern at the NBA, working on NBA.com and iOS WebViews',
-      'CTO of Julienne Studios',
-    ],
+    highlights: [],
     position: 'bottom-left',
   },
   {
