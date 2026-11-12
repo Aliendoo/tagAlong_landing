@@ -35,10 +35,8 @@ function fitRoute(){
  C ${right+45} ${h*.15},${rx+55} ${h*.23},${rx} ${h*.43}
  C ${rx-35} ${h*.60},${right-15} ${h*.53},${right+30} ${h*.42}
  C ${right+65} ${h*.35},${rx+65} ${h*.68},${right+15} ${h*.75}
- C ${w*.52} ${h*.90},${left+10} ${h*.58},${lx+25} ${h*.68}
- C ${lx-90} ${h*.81},${left-15} ${h*.88},${left-45} ${h*.65}
- C ${left-75} ${h*.45},${lx-70} ${h*.53},${lx+25} ${h*.83}
- C ${lx+65} ${h*1.02},${left-35} ${h*1.02},${left} ${bottom}`;
+ C ${w*.52} ${h*.90},${left+10} ${h*.64},${lx+25} ${h*.72}
+ C ${lx-45} ${h*.82},${lx+55} ${h*1.02},${left} ${bottom}`;
  routeSvg.setAttribute('viewBox',`0 0 ${w} ${h}`);routeSvg.querySelectorAll(':scope > path, #route-progress').forEach(path=>path.setAttribute('d',d));
  // Color each dash by its distance along the route; no shared reveal mask.
  routeSvg.querySelectorAll(':scope > path').forEach(path=>path.style.visibility='hidden');
