@@ -1,0 +1,1 @@
+Shanghai: Max van den Oetelaar / Unsplash, https://unsplash.com/photos/city-skyline-during-day-time-CxO9s6QHPAE (Unsplash License). Other destination and founder assets retained from the existing landing page.

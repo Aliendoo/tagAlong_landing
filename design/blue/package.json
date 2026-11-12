@@ -1,0 +1,30 @@
+{
+  "name": "tagalong-blue-system",
+  "version": "1.0.0",
+  "description": "",
+  "main": "paper-airplane.js",
+  "scripts": {
+    "build": "esbuild landing.jsx --bundle --minify --format=iife --outfile=../../public/blue/landing.bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "clsx": "2.1.1",
+    "liquid-glass-react": "1.1.1",
+    "motion": "14.13.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "tailwind-merge": "3.7.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "4.3.5",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "esbuild": "0.28.2",
+    "tailwindcss": "4.3.5",
+    "typescript": "7.0.2"
+  },
+  "private": true
+}
