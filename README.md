@@ -73,4 +73,4 @@ The selected Daydream refinement uses the centered product hierarchy at [Rhyme](
 - [Lightship: spacious travel cards](https://mobbin.com/sites/sections/019d6f74-42f5-492b-9cca-31fecb99dac2)
 - [Daylight: warm product stage](https://mobbin.com/sites/sections/3ffb34f4-4713-4a4d-a05e-d18961771f0b)
 
-Production Vercel project: `lilymoons-projects-94eee356/tagalong-landing-public`. GitHub auto-deployment is not connected to this project yet; deploy with the Vercel CLI until repository access is granted.
+Production Vercel project: [`lilymoons-projects-94eee356/tagalong-landing-public`. GitHub auto-deployment is not connected to this project yet; deploy with the Vercel CLI until repository access is granted.](https://tagalong-landing-public.vercel.app/)
