@@ -27,9 +27,18 @@ function fitRoute(){
  const left=Math.max(28,phone.left-box.left-gap),right=Math.min(w-28,phone.right-box.left+gap);
  const outerLeft=Math.max(22,left*.4),outerRight=Math.min(w-22,right+(w-right)*.6);
  const top=24,bottom=h-22;
- // One uninterrupted route: join both sides above the device, never underneath it.
- const bridgeY=Math.min(top-45,phone.top-box.top-42);
- const d=`M ${left} ${bottom} C ${outerLeft} ${h*.83},${outerLeft} ${h*.7},${left} ${h*.57} S ${outerLeft} ${h*.36},${left} ${h*.28} S ${outerLeft} ${top-10},${left} ${top} C ${left+w*.08} ${bridgeY},${right-w*.08} ${bridgeY},${right} ${top} C ${outerRight} ${h*.1},${outerRight} ${h*.25},${right} ${h*.34} S ${outerRight} ${h*.54},${right} ${h*.65} S ${outerRight} ${h*.87},${right} ${bottom}`;
+ // A descending travel doodle: broad side loops joined behind the phone.
+ const lx=outerLeft,rx=outerRight;
+ const d=`M ${left*.86} ${top}
+ C ${lx-45} ${top-40},${lx-65} ${h*.25},${left*.78} ${h*.30}
+ C ${left+35} ${h*.38},${left-20} ${h*.13},${w*.49} ${h*.15}
+ C ${right+45} ${h*.15},${rx+55} ${h*.23},${rx} ${h*.43}
+ C ${rx-35} ${h*.60},${right-15} ${h*.53},${right+30} ${h*.42}
+ C ${right+65} ${h*.35},${rx+65} ${h*.68},${right+15} ${h*.75}
+ C ${w*.52} ${h*.90},${left+10} ${h*.58},${lx+25} ${h*.68}
+ C ${lx-90} ${h*.81},${left-15} ${h*.88},${left-45} ${h*.65}
+ C ${left-75} ${h*.45},${lx-70} ${h*.53},${lx+25} ${h*.83}
+ C ${lx+65} ${h*1.02},${left-35} ${h*1.02},${left} ${bottom}`;
  routeSvg.setAttribute('viewBox',`0 0 ${w} ${h}`);routeSvg.querySelectorAll(':scope > path, #route-progress').forEach(path=>path.setAttribute('d',d));
  // Color each dash by its distance along the route; no shared reveal mask.
  routeSvg.querySelectorAll(':scope > path').forEach(path=>path.style.visibility='hidden');
