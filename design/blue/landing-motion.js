@@ -27,8 +27,9 @@ function fitRoute(){
  const left=Math.max(28,phone.left-box.left-gap),right=Math.min(w-28,phone.right-box.left+gap);
  const outerLeft=Math.max(22,left*.4),outerRight=Math.min(w-22,right+(w-right)*.6);
  const top=24,bottom=h-22;
- // Two continuous side trails: no segment passes beneath the device.
- const d=`M ${left} ${top} C ${outerLeft} ${top-10},${outerLeft} ${h*.2},${left} ${h*.28} S ${outerLeft} ${h*.48},${left} ${h*.57} S ${outerLeft} ${h*.83},${left} ${bottom} M ${right} ${top} C ${outerRight} ${h*.1},${outerRight} ${h*.25},${right} ${h*.34} S ${outerRight} ${h*.54},${right} ${h*.65} S ${outerRight} ${h*.87},${right} ${bottom}`;
+ // One uninterrupted route: join both sides above the device, never underneath it.
+ const bridgeY=Math.min(top-45,phone.top-box.top-42);
+ const d=`M ${left} ${bottom} C ${outerLeft} ${h*.83},${outerLeft} ${h*.7},${left} ${h*.57} S ${outerLeft} ${h*.36},${left} ${h*.28} S ${outerLeft} ${top-10},${left} ${top} C ${left+w*.08} ${bridgeY},${right-w*.08} ${bridgeY},${right} ${top} C ${outerRight} ${h*.1},${outerRight} ${h*.25},${right} ${h*.34} S ${outerRight} ${h*.54},${right} ${h*.65} S ${outerRight} ${h*.87},${right} ${bottom}`;
  routeSvg.setAttribute('viewBox',`0 0 ${w} ${h}`);routeSvg.querySelectorAll(':scope > path, #route-progress').forEach(path=>path.setAttribute('d',d));render();
 }
 addEventListener('resize',fitRoute);new ResizeObserver(fitRoute).observe(document.querySelector('.phone-frame'));fitRoute();
