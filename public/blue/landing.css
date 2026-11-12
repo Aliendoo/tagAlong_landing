@@ -28,7 +28,7 @@ footer{background:#f6fbff}
 @media(max-width:760px){.ios-bubble p{font-size:13px}.ios-bubble{padding:10px 14px}.chat-note{padding:0}.chat-reel{max-width:85%}}@media(prefers-reduced-motion:reduce){.ios-bubble,.ios-typing i{animation:none!important}}
 
 .destination-band{position:relative;z-index:2;width:100vw;margin:55px 0 0;left:50%;transform:translateX(-50%);overflow:hidden;touch-action:pan-y;cursor:grab;padding:24px 0 40px;mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}.destination-band:active{cursor:grabbing}.destination-band:focus-visible{outline:0;background:#ffffff18}.destination-band .postcards{width:max-content;max-width:none;display:flex;margin:0;gap:0;will-change:transform;justify-content:flex-start}.card-set{display:flex;gap:24px;padding-right:24px;flex-shrink:0}.postcard{flex:0 0 245px;width:245px;transform:rotate(-3deg);user-select:none}.postcard:nth-child(2n){transform:translateY(10px) rotate(3deg)}.postcard:nth-child(3n){transform:rotate(-2deg)}.postcard img{height:145px}.postcard b{font-size:14px}.postcard div{padding:12px 8px}
-header.landing-hero{padding-top:110px}header.landing-hero nav{position:fixed;left:0;right:0;top:0;padding:16px max(24px,calc((100vw - 1200px)/2));z-index:20;background:linear-gradient(#e7f5ffdb,#e7f5ff9c);backdrop-filter:blur(22px);align-items:flex-start;min-height:82px}.nav-link{padding-top:17px}nav .wordmark{padding-top:7px}#top-signup{width:210px;transition:width .5s cubic-bezier(.22,1,.36,1)}#top-signup:has(.goo-form:not(.collapsed)){width:min(480px,55vw)}#top-signup .goo-wrap{grid-template-rows:62px 0 0 0}#top-signup [data-goo-note],#top-signup .goo-replay{visibility:hidden;pointer-events:none}#top-signup:has(.error) [data-goo-note]{visibility:visible;height:auto;min-height:48px;padding:8px 18px;background:#e7f5fff5;border-radius:0 0 15px 15px}#top-signup .goo-form{height:54px;min-height:54px}#top-signup .goo-body,#top-signup .goo-drop,#top-signup .goo-open,#top-signup .goo-send,#top-signup input{height:54px;min-height:54px}#top-signup .goo-envelope{top:17px}
+
 .waitlist{min-height:650px;padding-top:140px;padding-bottom:130px;background:linear-gradient(to bottom,#f6fbff 0%,#e5f3fd 14%,#c7e6fa 32%,#9bcff1 54%,#6db1e5 76%,#4997d3 100%)}#waitlist-clouds{mask-image:linear-gradient(transparent 0%,transparent 12%,#0008 50%,#000 100%);opacity:.6}footer{background:#4997d3}
 @media(max-width:760px){.postcard{flex-basis:200px;width:200px}.postcard img{height:120px}.postcard b{font-size:12px}.card-set{gap:16px;padding-right:16px}header.landing-hero nav{padding:12px 16px;gap:12px}#top-signup{width:170px}#top-signup .goo-open{width:170px;left:calc(50% - 85px);font-size:12px}#top-signup .collapsed .goo-body,#top-signup .collapsed .goo-drop{width:170px;left:calc(50% - 85px)}#top-signup:has(.goo-form:not(.collapsed)){width:calc(100vw - 32px)}nav:has(#top-signup .goo-form:not(.collapsed)) .wordmark{display:none}.waitlist{padding-top:100px;padding-bottom:100px;min-height:590px}}
 header.landing-hero{z-index:10}
@@ -51,3 +51,13 @@ header.landing-hero{z-index:10}
 @media(max-width:760px){.destination-band{padding-top:58px;padding-bottom:48px}.postcard img.wood-clip{top:-27px;height:58px}.travel-line{top:105px;height:calc(100% - 245px);left:18px;width:calc(100% - 36px)}}
 
 .travel-line{opacity:1}.travel-line>path:first-of-type{stroke:#aecfe6}.travel-line .route-pin{stroke-width:2}.route-stop{pointer-events:none}@media(max-width:760px){.travel-line{left:6px;width:calc(100% - 12px)}}
+
+/* Navigation belongs to the hero and scrolls away with it. */
+header.landing-hero{padding-top:28px}
+header.landing-hero nav{position:relative;inset:auto;display:flex;align-items:center;padding:0;min-height:54px;gap:32px;background:transparent;backdrop-filter:none;box-shadow:none;border:0;z-index:3}
+nav .wordmark,.nav-link{padding-top:0}
+.nav-join{background:#ffffff42;box-shadow:none;min-height:50px;padding:13px 25px;font-size:14px;color:#173655}
+#hero-signup{width:min(540px,100%);margin:30px auto 0;text-align:left}
+#hero-signup .goo-wrap{width:100%;margin:0}
+.phone-frame{aspect-ratio:1/2}
+@media(max-width:760px){header.landing-hero{padding-top:20px}header.landing-hero nav{padding:0;gap:14px}.nav-join{padding:11px 16px;font-size:12px;min-height:44px}.hero-copy{margin-top:65px}#hero-signup{margin-top:26px}}

@@ -29,4 +29,4 @@ createRoot(document.getElementById('hero-clouds')).render(<CloudShader count={6}
 
 createRoot(document.getElementById('waitlist-clouds')).render(<CloudShader count={6} speed={.18} skyTopColor='#61B9F1' skyBottomColor='#2379CA'/>);
 
-createRoot(document.getElementById('top-signup')).render(<GooeyPreview/>);
+createRoot(document.getElementById('hero-signup')).render(<GooeyPreview/>);
