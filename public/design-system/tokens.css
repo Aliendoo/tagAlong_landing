@@ -1,0 +1,40 @@
+/* TagAlong Open Sky — proposed tokens, not applied to production */
+:root {
+  --color-action: #759CD0;
+  --color-on-action: #153250;
+  --color-action-hover: #0769AA;
+  --color-action-pressed: #07558A;
+  --color-action-subtle: #EAF2FF;
+  --color-sky: #DDEDF9;
+  --color-background: #F5F5F5;
+  --color-surface: #FFFFFF;
+  --color-text: #173655;
+  --color-text-secondary: #526780;
+  --color-divider: #D5E2F0;
+  --color-control-border: #7C92AB;
+  --color-focus: #123A8C;
+  --color-success: #187653;
+  --color-maybe: #805800;
+  --color-error: #B83C4C;
+  --color-popup-background: #FFF0B3;
+  --paper-ink-action: linear-gradient(125deg, var(--color-text), var(--color-action));
+  --paper-sky-action: linear-gradient(125deg, var(--color-sky), var(--color-action));
+  --popup-paper: radial-gradient(ellipse at 95% 12%, var(--color-sky), transparent 68%),
+    linear-gradient(145deg, var(--color-background) 15%, var(--color-sky));
+  --font-heading: 'Manrope', sans-serif;
+  --font-body: 'Figtree', sans-serif;
+  --radius-control: 16px;
+  --radius-card: 24px;
+  --radius-pill: 999px;
+  --touch-target: 48px;
+  --shadow-card: 0 8px 24px rgb(20 45 78 / 8%);
+  --duration-feedback: 160ms;
+  --duration-transition: 260ms;
+}
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration-feedback: 0ms; --duration-transition: 0ms; }
+}
+
+:root { --glass-blur: 8px; --glass-border: rgb(255 255 255 / 60%); --blue-mid: #3C6E9F; --blue-soft: #799CBA; }
+
+:root { --sky-hero-top: #149CED; --sky-hero-bottom: #C8EDFF; --glass-elasticity: .38; }

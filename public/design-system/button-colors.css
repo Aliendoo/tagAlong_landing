@@ -1,0 +1,59 @@
+/* The solid pairings also provide the fallback when glass is unavailable. */
+body button {
+  color: var(--color-on-action);
+  background: var(--color-action);
+}
+body button:hover:enabled {
+  color: var(--color-surface);
+  background: var(--color-action-hover);
+}
+body button:active:enabled {
+  color: var(--color-surface);
+  background: var(--color-action-pressed);
+}
+body button:is(.secondary, .chip, .day) {
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+body button:is(.secondary, .chip, .day):is(:hover, :active):enabled,
+body button.day.suggested {
+  color: var(--color-action-pressed);
+  background: var(--color-action-subtle);
+}
+body button.chip[aria-pressed="true"], body button.day.selected {
+  color: var(--color-on-action);
+  background: var(--color-action);
+  border-color: var(--color-action-pressed);
+}
+body .vote.no { --vote-ink: var(--color-error); }
+body .vote.maybe { --vote-ink: var(--color-maybe); }
+body .vote.yes { --vote-ink: var(--color-success); }
+body .vote button:enabled {
+  color: var(--vote-ink);
+  background: var(--color-surface);
+  border-color: var(--vote-ink);
+}
+body .vote button[aria-pressed="true"] {
+  color: var(--color-surface);
+  background: var(--vote-ink);
+}
+body button:disabled:not(.goo-open, .goo-send) {
+  background: var(--color-background);
+  color: var(--color-text-secondary);
+  opacity: 1;
+}
+/* Bound the glass luminance even when a bright cloud passes underneath. */
+body :is(.aceternity-pill button, button.glass-button, button.frost-pill):is(:enabled, :disabled),
+body .goo-form .goo-lenses :is(.goo-body, .goo-drop) {
+  background: rgb(7 85 138 / 92%) !important;
+  color: var(--color-surface) !important;
+}
+body .goo-form button:is(.goo-open, .goo-send):enabled {
+  color: var(--color-surface) !important;
+  background: transparent !important;
+}
+body button:enabled:focus-visible {
+  outline: 2px solid var(--color-focus) !important;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px var(--color-surface) !important;
+}
