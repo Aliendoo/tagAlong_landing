@@ -72,3 +72,17 @@ nav .wordmark,.nav-link{padding-top:0}
 .signup-anchor,#hero-signup {scroll-margin-top:32px}
 @media(max-width:760px){.contact-links{max-width:360px;gap:12px}.contact-links a{width:100%;min-height:88px}.contact.waitlist{min-height:0;padding:90px 24px}}
 @media(prefers-reduced-motion:reduce){.contact-links a:hover{transform:none}}
+
+.contact-form{position:relative;z-index:1;text-align:left;width:min(100%,560px);margin:30px auto 8px;padding:28px;border-radius:24px;background:rgba(255,255,255,.86);backdrop-filter:blur(18px);color:#173655}
+.contact-form label{display:block;margin:0 0 8px;font:600 14px Poppins,sans-serif}
+.contact-form input,.contact-form textarea{display:block;width:100%;box-sizing:border-box;margin:0 0 20px;padding:14px 16px;border:1px solid #526780;border-radius:14px;background:#F5F5F5;color:#173655;font:400 16px/1.5 Poppins,sans-serif}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:#526780;opacity:1}
+.contact-form textarea{resize:vertical;min-height:130px}
+.contact-form button{width:100%;min-height:50px;border:0;border-radius:999px;background:#759CD0;color:#153250;font:700 16px Manrope,sans-serif;cursor:pointer}
+.contact-form button:hover{background:#07558A;color:white}
+.contact-form :is(input,textarea,button):focus-visible{outline:2px solid #173655;outline-offset:3px}
+.contact-form button:disabled{background:#DDEDF9;color:#526780;cursor:wait}
+.contact-form [aria-invalid="true"]{border-color:#B83C4C}
+.contact-form #contact-status{font-size:13px;line-height:1.5;min-height:40px;margin:12px 0 0}
+.contact-form .contact-trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
+@media(max-width:760px){.contact-form{padding:22px}.contact-links a{min-height:70px}}
