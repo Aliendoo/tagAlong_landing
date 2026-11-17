@@ -86,3 +86,10 @@ nav .wordmark,.nav-link{padding-top:0}
 .contact-form #contact-status{font-size:13px;line-height:1.5;min-height:40px;margin:12px 0 0}
 .contact-form .contact-trap{position:absolute;left:-10000px;width:1px;height:1px;overflow:hidden}
 @media(max-width:760px){.contact-form{padding:22px}.contact-links a{min-height:70px}}
+
+/* Keep contact navigation visible on small screens. */
+.contact-instagram{position:relative;z-index:1;display:inline-flex;align-items:center;min-height:44px;margin:-8px auto 20px;color:#173655;font-size:14px;text-underline-offset:4px}
+.contact-instagram:hover{text-decoration:underline}
+.contact-instagram:focus-visible{outline:2px solid #173655;outline-offset:4px;border-radius:8px}
+@media(max-width:760px){.nav-link.nav-contact{display:inline-flex;align-items:center;min-height:44px;margin-left:auto;font-size:12px;white-space:nowrap}header.landing-hero nav{gap:12px}}
+@media(max-width:380px){nav .wordmark{font-size:22px}.nav-join{padding:11px 12px}header.landing-hero nav{gap:8px}}
