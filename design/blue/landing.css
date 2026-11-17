@@ -61,3 +61,14 @@ nav .wordmark,.nav-link{padding-top:0}
 #hero-signup .goo-wrap{width:100%;margin:0}
 .phone-frame{aspect-ratio:1/2}
 @media(max-width:760px){header.landing-hero{padding-top:20px}header.landing-hero nav{padding:0;gap:14px}.nav-join{padding:11px 16px;font-size:12px;min-height:44px}.hero-copy{margin-top:65px}#hero-signup{margin-top:26px}}
+
+/* Contact links remain readable over the cloud backdrop. */
+.contact-links {position:relative;z-index:1;display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin:32px auto 0;max-width:900px}
+.contact-links a {display:flex;flex-direction:column;gap:6px;align-items:center;justify-content:center;min-width:220px;min-height:100px;padding:22px 28px;border-radius:24px;background:rgba(255,255,255,.86);backdrop-filter:blur(18px);color:#173655;box-shadow:0 8px 24px #1736550c;transition:transform .2s ease}
+.contact-links strong {font-family:Manrope,sans-serif;font-size:18px}
+.contact-links span {font-size:13px;color:#07558A}
+.contact-links a:hover {transform:translateY(-3px);background:#fff}
+.contact-links a:focus-visible {outline:3px solid #173655;outline-offset:4px}
+.signup-anchor,#hero-signup {scroll-margin-top:32px}
+@media(max-width:760px){.contact-links{max-width:360px;gap:12px}.contact-links a{width:100%;min-height:88px}.contact.waitlist{min-height:0;padding:90px 24px}}
+@media(prefers-reduced-motion:reduce){.contact-links a:hover{transform:none}}
