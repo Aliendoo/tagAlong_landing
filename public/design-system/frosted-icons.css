@@ -13,3 +13,10 @@ body{font-size:1.0625rem}h2{font-size:1.75rem;line-height:1.2}h3{font-size:1.375
 
 /* Voting is an immediate action, never a selected toggle. */
 .swipe-stage{position:relative;overflow:hidden;border-radius:20px;isolation:isolate}.swipe-card{position:relative;will-change:transform,opacity}.swipe-card .trip-art img{width:100%;height:100%;object-fit:cover}.swipe-card .activity-copy{min-height:148px}.swipe-feedback{position:absolute;z-index:5;left:50%;top:50%;transform:translate(-50%,-50%);width:104px;height:104px;object-fit:contain;pointer-events:none;filter:drop-shadow(0 6px 14px #17365530)}.votes .vote button[aria-pressed=true]{background:transparent;box-shadow:none;transform:none}
+/* Photo deck: next card underneath, free movement above fixed controls. */
+.swipe-stage{overflow:visible;margin:8px 0 28px;border-radius:24px;perspective:1000px}
+.swipe-card{position:relative;z-index:2;border:0;border-radius:20px;box-shadow:0 8px 20px #17365520;background:#fff;transform-origin:50% 85%;touch-action:pan-y;user-select:none;cursor:grab}
+.swipe-card:active{cursor:grabbing}.swipe-card .trip-art{height:290px}.swipe-card .activity-copy{min-height:130px;padding:18px}.swipe-card .activity-copy h3{font-size:22px}
+.swipe-under{position:absolute;inset:0;z-index:1;pointer-events:none;transform:translateY(12px) scale(.95);box-shadow:0 6px 16px #17365515}
+.swipe-feedback{top:44%;width:112px;height:112px;opacity:0}.votes{position:relative;z-index:3}.swipe-stage~.status{min-height:44px}
+@media(max-width:400px){.swipe-card .trip-art{height:250px}}
