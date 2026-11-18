@@ -100,3 +100,7 @@ nav .wordmark,.nav-link{padding-top:0}
 .contact-heading .contact-instagram:hover{background:#fff;transform:translateY(-2px) scale(1.04)}
 .contact-heading .contact-instagram:active{transform:scale(.95)}
 @media(prefers-reduced-motion:reduce){.contact-heading .contact-instagram{transition:none}.contact-heading .contact-instagram:hover,.contact-heading .contact-instagram:active{transform:none}}
+
+.founder-link{display:inline-flex;align-items:center;justify-content:center;gap:8px;color:inherit;padding:7px 12px;border-radius:12px;text-decoration:none;transition:background .2s,transform .2s}
+.founder-link>span{font-size:.85em;transition:transform .2s}.founder-link:hover{background:#ddedf9;color:#173655}.founder-link:hover>span{transform:translate(2px,-2px)}.founder-link:focus-visible{outline:2px solid #173655;outline-offset:3px;background:#ddedf9}
+@media(prefers-reduced-motion:reduce){.founder-link,.founder-link>span{transition:none}.founder-link:hover>span{transform:none}}
