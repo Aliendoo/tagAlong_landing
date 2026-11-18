@@ -20,3 +20,11 @@ body{font-size:1.0625rem}h2{font-size:1.75rem;line-height:1.2}h3{font-size:1.375
 .swipe-under{position:absolute;inset:0;z-index:1;pointer-events:none;transform:translateY(12px) scale(.95);box-shadow:0 6px 16px #17365515}
 .swipe-feedback{top:44%;width:112px;height:112px;opacity:0}.votes{position:relative;z-index:3}.swipe-stage~.status{min-height:44px}
 @media(max-width:400px){.swipe-card .trip-art{height:250px}}
+
+/* Simple, friendly symbols: quiet frost without individual glass tiles. */
+.frost-icon-gallery{gap:20px;padding:34px 24px;background:radial-gradient(ellipse at 10% 0%,#759cd035,transparent 65%),linear-gradient(115deg,#35577c,#45688c)}
+.frost-icon-surface{width:44px;height:44px;border-radius:0;background:transparent;backdrop-filter:none;box-shadow:none}
+.frost-glyph{width:24px;height:24px;filter:drop-shadow(0 1px 1px #ffffff18)}
+.frost-icon-sample{gap:6px;font-size:.8125rem;font-weight:500;color:#fff}.frost-icon-surface:hover{transform:translateY(-1px) scale(1.04)}
+@media(max-width:800px){.frost-icon-gallery{gap:22px 14px}}
+@media(prefers-reduced-motion:reduce){.frost-icon-surface:hover{transform:none}}
